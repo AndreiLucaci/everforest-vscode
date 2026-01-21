@@ -1,6 +1,6 @@
 {
-  "name": "everforest-plus",
-  "displayName": "Everforest+",
+  "name": "everforest-pro",
+  "displayName": "Everforest Pro",
   "description": "A warm, soft-contrast color scheme for Visual Studio Code",
   "version": "1.0.0",
   "publisher": "AndreiLucaci",
@@ -46,18 +46,18 @@
   "contributes": {
     "themes": [
       {
-        "label": "Everforest+ Dark",
+        "label": "Everforest Pro Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/everforest-dark.json"
       },
       {
-        "label": "Everforest+ Light",
+        "label": "Everforest Pro Light",
         "uiTheme": "vs",
         "path": "./themes/everforest-light.json"
       }
     ],
     "configuration": {
-      "title": "Everforest+",
+      "title": "Everforest Pro",
       "properties": {
         "everforest.darkContrast": {
           "type": "string",

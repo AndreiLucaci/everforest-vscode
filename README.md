@@ -1,5 +1,5 @@
 <h1 align="center">
-𝐄𝐯𝐞𝐫𝐟𝐨𝐫𝐞𝐬𝐭+
+𝐄𝐯𝐞𝐫𝐟𝐨𝐫𝐞𝐬𝐭 𝐏𝐫𝐨
 </h1>
 
 <h2 align="center">
@@ -39,15 +39,15 @@
 ![light-soft-high-contrast](https://gitlab.com/sainnhe/img/-/raw/master/ef-vsc-light-soft-high-contrast.png)
 
 <p align="center">
-    <a href="https://marketplace.visualstudio.com/items?itemName=AndreiLucaci.everforest-plus" alt="Marketplace">
+    <a href="https://marketplace.visualstudio.com/items?itemName=AndreiLucaci.everforest-pro" alt="Marketplace">
         <img src="https://img.shields.io/badge/vscode-marketplace-blue" /></a>
-    <a href="https://open-vsx.org/extension/AndreiLucaci/everforest-plus" alt="Registry">
+    <a href="https://open-vsx.org/extension/AndreiLucaci/everforest-pro" alt="Registry">
         <img src="https://img.shields.io/badge/open--vsx-registry-green" /></a>
     <a href="https://github.com/AndreiLucaci/everforest-vscode" alt="Repository">
         <img src="https://img.shields.io/badge/github-repository-blueviolet" /></a>
     <a href="https://github.com/AndreiLucaci/everforest-vscode/issues" alt="Issues">
         <img src="https://img.shields.io/badge/issue-feedback-red" /></a>
-    <a href="https://vscode.dev/theme/AndreiLucaci.everforest-plus" alt="Preview">
+    <a href="https://vscode.dev/theme/AndreiLucaci.everforest-pro" alt="Preview">
         <img src="https://img.shields.io/badge/preview-vscode.dev-yellow" /></a>
 </p>
 
@@ -137,14 +137,14 @@ The following file types and syntax extensions are basically optimized, but ther
 ## Installation
 
 1. Press extensions icon in your editor.
-2. Search for `AndreiLucaci.everforest-plus`.
+2. Search for `AndreiLucaci.everforest-pro`.
 3. Select this extension and press `install` button.
 
 ## Usage
 
 1. Click the gear button in the lower left corner.
 2. Click `Color Theme`.
-3. Select Everforest+ Dark or Everforest+ Light in the list.
+3. Select Everforest Pro Dark or Everforest Pro Light in the list.
 
 ## Customization
 
@@ -152,7 +152,7 @@ There are some configuration options available in this theme, you can customize 
 
 1. Click the gear button in the lower left corner.
 2. Click `Settings`.
-3. Select `Everforest+` and change the settings.
+3. Select `Everforest Pro` and change the settings.
 
 ## FAQ
 
