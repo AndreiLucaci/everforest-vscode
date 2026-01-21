@@ -1,9 +1,3 @@
-/*---------------------------------------------------------------
- *  Homepage:   https://github.com/sainnhe/everforest-vscode
- *  Copyright:  2020 Sainnhe Park <i@sainnhe.dev>
- *  License:    MIT
- *--------------------------------------------------------------*/
-
 // To add a new configuration option:
 // 1. Edit package.json
 // 2. Add the configuration option in this interface

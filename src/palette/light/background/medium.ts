@@ -1,9 +1,3 @@
-/*---------------------------------------------------------------------------------------------
- *  Homepage:   https://github.com/sainnhe/everforest-vscode
- *  Copyright:  2020 Sainnhe Park <i@sainnhe.dev>
- *  License:    MIT
- *--------------------------------------------------------------------------------------------*/
-
 export default {
   bg0: "#efebd4",
   bg1: "#f4f0d9",

@@ -1,9 +1,3 @@
-/*---------------------------------------------------------------
- *  Homepage:   https://github.com/sainnhe/everforest-vscode
- *  Copyright:  2020 Sainnhe Park <i@sainnhe.dev>
- *  License:    MIT
- *--------------------------------------------------------------*/
-
 import { workspace, window } from "vscode";
 
 export function activate() {

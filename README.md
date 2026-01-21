@@ -39,15 +39,15 @@
 ![light-soft-high-contrast](https://gitlab.com/sainnhe/img/-/raw/master/ef-vsc-light-soft-high-contrast.png)
 
 <p align="center">
-    <a href="https://marketplace.visualstudio.com/items?itemName=sainnhe.everforest" alt="Marketplace">
+    <a href="https://marketplace.visualstudio.com/items?itemName=AndreiLucaci.everforest" alt="Marketplace">
         <img src="https://img.shields.io/badge/vscode-marketplace-blue" /></a>
-    <a href="https://open-vsx.org/extension/sainnhe/everforest" alt="Registry">
+    <a href="https://open-vsx.org/extension/AndreiLucaci/everforest" alt="Registry">
         <img src="https://img.shields.io/badge/open--vsx-registry-green" /></a>
-    <a href="https://github.com/sainnhe/everforest-vscode" alt="Repository">
+    <a href="https://github.com/AndreiLucaci/everforest-vscode" alt="Repository">
         <img src="https://img.shields.io/badge/github-repository-blueviolet" /></a>
-    <a href="https://github.com/sainnhe/everforest-vscode/issues" alt="Issues">
+    <a href="https://github.com/AndreiLucaci/everforest-vscode/issues" alt="Issues">
         <img src="https://img.shields.io/badge/issue-feedback-red" /></a>
-    <a href="https://vscode.dev/theme/sainnhe.everforest" alt="Preview">
+    <a href="https://vscode.dev/theme/AndreiLucaci.everforest" alt="Preview">
         <img src="https://img.shields.io/badge/preview-vscode.dev-yellow" /></a>
 </p>
 
@@ -94,7 +94,7 @@ The following file types and syntax extensions are basically optimized, but ther
 - **Haskell:** [Haskell Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell)
 - **Html:** builtin
 - **Java:** builtin
-- **JavaScript:** builtin ([~~Babel JavaScript~~](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel) not recommend [#6](https://github.com/sainnhe/gruvbox-material-vscode/issues/6))
+- **JavaScript:** builtin ([~~Babel JavaScript~~](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel) not recommend, see issue [#6](https://github.com/AndreiLucaci/everforest-vscode/issues/6))
 - **JSON:** builtin
 - **JSX:** builtin
 - **Julia:** [Julia](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
@@ -137,7 +137,7 @@ The following file types and syntax extensions are basically optimized, but ther
 ## Installation
 
 1. Press extensions icon in your editor.
-2. Search for `sainnhe.everforest`.
+2. Search for `AndreiLucaci.everforest`.
 3. Select this extension and press `install` button.
 
 ## Usage
@@ -160,7 +160,7 @@ There are some configuration options available in this theme, you can customize 
 
 **A:** The `italicKeywords` is designed to use with fonts that support cursive italic styles. To enable this feature:
 
-1. Install a font that supports cursive italic styles, for example: https://aka.sainnhe.dev/fonts
+1. Install a font that supports cursive italic styles, for example: [Nerd Fonts](https://www.nerdfonts.com/)
 2. Set the `everforest.italicKeywords` option to `true` in user settings.
 3. (optional) Set the `everforest.italicComments` option to `false` in user settings.
 
@@ -168,7 +168,7 @@ There are some configuration options available in this theme, you can customize 
 
 See this [wiki page](https://github.com/sainnhe/everforest/wiki).
 
-### More Color Schemes
+### More Color Schemes by Original Author
 
 - [Gruvbox Material](https://github.com/sainnhe/gruvbox-material-vscode)
 - [Edge](https://github.com/sainnhe/edge-vscode)
@@ -176,7 +176,7 @@ See this [wiki page](https://github.com/sainnhe/everforest/wiki).
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/sainnhe/gruvbox-material-vscode/blob/master/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/AndreiLucaci/everforest-vscode/blob/master/CONTRIBUTING.md).
 
 ## Inspirations
 
@@ -187,4 +187,4 @@ See [CONTRIBUTING.md](https://github.com/sainnhe/gruvbox-material-vscode/blob/ma
 
 ## License
 
-[MIT License](https://github.com/sainnhe/everforest-vscode/blob/master/LICENSE)
+[MIT License](https://github.com/AndreiLucaci/everforest-vscode/blob/master/LICENSE)

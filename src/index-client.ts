@@ -1,9 +1,3 @@
-/*---------------------------------------------------------------
- *  Homepage:   https://github.com/sainnhe/everforest-vscode
- *  Copyright:  2020 Sainnhe Park <i@sainnhe.dev>
- *  License:    MIT
- *--------------------------------------------------------------*/
-
 import { workspace } from "vscode";
 import { join } from "path";
 import Utils from "./utils";
