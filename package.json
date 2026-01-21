@@ -1,7 +1,7 @@
 {
-  "name": "everforest",
-  "displayName": "Everforest",
-  "description": "Comfortable & Pleasant Color Scheme for Visual Studio Code",
+  "name": "everforest-plus",
+  "displayName": "Everforest+",
+  "description": "A warm, soft-contrast color scheme for Visual Studio Code",
   "version": "1.0.0",
   "publisher": "AndreiLucaci",
   "author": "Andrei Lucaci (https://andreilucaci.ro)",
@@ -16,6 +16,9 @@
   "license": "MIT",
   "keywords": [
     "green",
+    "everforest",
+    "warm",
+    "soft",
     "theme"
   ],
   "galleryBanner": {
@@ -43,18 +46,18 @@
   "contributes": {
     "themes": [
       {
-        "label": "Everforest Dark",
+        "label": "Everforest+ Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/everforest-dark.json"
       },
       {
-        "label": "Everforest Light",
+        "label": "Everforest+ Light",
         "uiTheme": "vs",
         "path": "./themes/everforest-light.json"
       }
     ],
     "configuration": {
-      "title": "Everforest",
+      "title": "Everforest+",
       "properties": {
         "everforest.darkContrast": {
           "type": "string",

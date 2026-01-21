@@ -23,7 +23,7 @@ class Utils {
     // {{{
     return {
       dark: {
-        name: "Everforest Dark",
+        name: "Everforest+ Dark",
         type: "dark",
         semanticHighlighting: true,
         semanticTokenColors: getSemantic(configuration, "dark"),
@@ -31,7 +31,7 @@ class Utils {
         tokenColors: getSyntax(configuration, "dark"),
       },
       light: {
-        name: "Everforest Light",
+        name: "Everforest+ Light",
         type: "light",
         semanticHighlighting: true,
         semanticTokenColors: getSemantic(configuration, "light"),

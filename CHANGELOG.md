@@ -1,9 +1,10 @@
 # Change Log
 
-All notable changes to the "everforest" extension will be documented in this file.
+All notable changes to the "everforest-plus" extension will be documented in this file.
 
 ## 1.0.0
 
+- Rebranded to Everforest+
 - Changed maintainers from original sainnhe to AndreiLucaci
 
 ## 0.3.0
