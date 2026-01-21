@@ -2,7 +2,7 @@
   "name": "everforest-pro",
   "displayName": "Everforest Pro",
   "description": "A warm, soft-contrast color scheme for Visual Studio Code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "AndreiLucaci",
   "author": "Andrei Lucaci (https://andreilucaci.ro)",
   "homepage": "https://github.com/AndreiLucaci/everforest-vscode",
@@ -13,6 +13,7 @@
   "bugs": {
     "url": "https://github.com/AndreiLucaci/everforest-vscode/issues"
   },
+  "icon": "icon.png",
   "license": "MIT",
   "keywords": [
     "green",

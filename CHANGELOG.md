@@ -2,6 +2,10 @@
 
 All notable changes to the "everforest-pro" extension will be documented in this file.
 
+## 1.0.1
+
+- Added icon for theme
+
 ## 1.0.0
 
 - Rebranded to Everforest Pro
