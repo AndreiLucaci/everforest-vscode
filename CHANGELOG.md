@@ -2,6 +2,10 @@
 
 All notable changes to the "everforest" extension will be documented in this file.
 
+## 1.0.0
+
+- Changed maintainers from original sainnhe to AndreiLucaci
+
 ## 0.3.0
 
 - Change `activationEvents`.
