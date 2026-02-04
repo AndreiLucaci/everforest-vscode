@@ -2,6 +2,10 @@
 
 All notable changes to the "everforest-pro" extension will be documented in this file.
 
+## 1.0.4
+
+- Added preview links in readme for both the dark and the light version of the theme
+
 ## 1.0.3
 
 - Remove broken OpenVsix link from readme

@@ -14,7 +14,8 @@
 
 [![Visual Studio Marketplace](https://img.shields.io/badge/vscode-marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=AndreiLucaci.everforest-pro)
 [![GitHub](https://img.shields.io/badge/github-repository-blueviolet)](https://github.com/AndreiLucaci/everforest-vscode)
-[![Preview](https://img.shields.io/badge/preview-vscode.dev-yellow)](https://vscode.dev/theme/AndreiLucaci.everforest-pro)
+[![Preview Dark](https://img.shields.io/badge/🌙_preview-dark-darkblue)](https://vscode.dev/theme/AndreiLucaci.everforest-pro/Everforest%20Pro%20Dark)
+[![Preview Light](https://img.shields.io/badge/☀️_preview-light-yellow)](https://vscode.dev/theme/AndreiLucaci.everforest-pro/Everforest%20Pro%20Light)
 
 </div>
 
