@@ -1,9 +1,16 @@
 import { workspace } from "vscode";
 import { join } from "path";
 import Utils from "./utils";
+import { AutoSwitcher } from "./autoSwitch";
+
+let autoSwitcher: AutoSwitcher | undefined;
 
 export function activate() {
   const utils = new Utils();
+  autoSwitcher = new AutoSwitcher();
+
+  // Start auto-switching if enabled
+  autoSwitcher.start();
 
   // Regenerate theme files when user configuration changes.
   workspace.onDidChangeConfiguration((event) => {
@@ -13,6 +20,9 @@ export function activate() {
         join(__dirname, "..", "themes", "everforest-light.json"),
         utils.getThemeData(utils.getConfiguration())
       );
+
+      // Restart auto-switcher when settings change
+      autoSwitcher?.start();
     });
   });
 
@@ -29,4 +39,8 @@ export function activate() {
   }
 }
 
-export function deactivate() {}
+export function deactivate() {
+  // Clean up timer on extension deactivation
+  autoSwitcher?.stop();
+  autoSwitcher = undefined;
+}

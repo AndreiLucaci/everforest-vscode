@@ -70,6 +70,23 @@ Everforest Pro offers extensive customization options to match your personal pre
 - **Italic Keywords** - Enable cursive italics for keywords
 - **Italic Comments** - Toggle italic styling for comments
 - **Custom Palette** - Fine-tune individual colors
+- **🌅 Auto Theme Switching** - Automatically switch between light and dark themes
+
+### 🌅 Auto Theme Switching (Pro Feature)
+
+Let Everforest Pro automatically switch between light and dark themes based on your schedule!
+
+**Time-Based Schedule:**
+
+```json
+"everforestPro.autoSwitch.enabled": true,
+"everforestPro.autoSwitch.lightThemeTime": "07:00",
+"everforestPro.autoSwitch.darkThemeTime": "19:00"
+```
+
+Perfect for protecting your eyes - light theme during the day, dark theme at night!
+
+> **Note:** Settings are now organized into groups (`theme.*` and `autoSwitch.*`) for better organization. See the [migration guide](#-migration-from-v1x-to-v20) if upgrading from v1.x.
 
 ### How to Customize
 
@@ -81,6 +98,13 @@ Everforest Pro offers extensive customization options to match your personal pre
 
 ## 💬 FAQ
 
+**Q: How do I enable auto-switching themes?**
+
+**A:** Enable scheduled theme switching in settings:
+
+1. Search for `everforestPro.autoSwitch.enabled` and set it to `true`
+2. Set your preferred times with `autoSwitch.lightThemeTime` and `autoSwitch.darkThemeTime` (24-hour format)
+
 **Q: How do I enable italic keywords?**
 
 **A:** To use cursive italic keywords:
@@ -91,7 +115,7 @@ Everforest Pro offers extensive customization options to match your personal pre
 
 **Q: Can I use this theme at night?**
 
-**A:** Absolutely! Switch to **Everforest Pro Dark** for nighttime coding. Both variants are designed with the same eye-friendly principles.
+**A:** Absolutely! Switch to **Everforest Pro Dark** for nighttime coding, or enable auto-switching to do it automatically. Both variants are designed with the same eye-friendly principles.
 
 **Q: Does this work with blue light filters?**
 
@@ -114,6 +138,58 @@ Found a bug or want to suggest an improvement? Contributions are welcome!
 
 ---
 
-## 🙏 Credits
+## � Migration from v1.x to v2.0
+
+Version 2.0 introduces a breaking change in settings structure for better organization.
+
+### What Changed?
+
+Settings are now grouped:
+
+- **Theme settings:** `everforestPro.theme.*`
+- **Auto-switch settings:** `everforestPro.autoSwitch.*`
+
+### Quick Migration
+
+Open your settings (JSON) and update:
+
+```json
+// OLD (v1.x)
+"everforestPro.darkContrast": "medium",
+"everforestPro.italicComments": true,
+"everforestPro.autoSwitch": true,
+"everforestPro.lightThemeTime": "07:00"
+
+// NEW (v2.0)
+"everforestPro.theme.darkContrast": "medium",
+"everforestPro.theme.italicComments": true,
+"everforestPro.autoSwitch.enabled": true,
+"everforestPro.autoSwitch.lightThemeTime": "07:00"
+```
+
+### Complete Mapping
+
+| Old Setting                       | New Setting                             |
+| --------------------------------- | --------------------------------------- |
+| `darkContrast`                    | `theme.darkContrast`                    |
+| `lightContrast`                   | `theme.lightContrast`                   |
+| `darkWorkbench`                   | `theme.darkWorkbench`                   |
+| `lightWorkbench`                  | `theme.lightWorkbench`                  |
+| `darkCursor`                      | `theme.darkCursor`                      |
+| `lightCursor`                     | `theme.lightCursor`                     |
+| `darkSelection`                   | `theme.darkSelection`                   |
+| `lightSelection`                  | `theme.lightSelection`                  |
+| `italicKeywords`                  | `theme.italicKeywords`                  |
+| `italicComments`                  | `theme.italicComments`                  |
+| `diagnosticTextBackgroundOpacity` | `theme.diagnosticTextBackgroundOpacity` |
+| `highContrast`                    | `theme.highContrast`                    |
+| `autoSwitch`                      | `autoSwitch.enabled`                    |
+| `lightThemeTime`                  | `autoSwitch.lightThemeTime`             |
+| `darkThemeTime`                   | `autoSwitch.darkThemeTime`              |
+| ~~`autoSwitchMode`~~              | _(removed)_                             |
+
+---
+
+## �🙏 Credits
 
 This theme is based on the excellent [Everforest](https://github.com/sainnhe/everforest-vscode) color scheme by [sainnhe](https://github.com/sainnhe) (which is sadly archived now).

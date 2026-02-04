@@ -18,20 +18,35 @@ export default class Utils {
   getConfiguration(): Configuration {
     const workspaceConfiguration = workspace.getConfiguration("everforestPro");
     return {
-      darkContrast: workspaceConfiguration.get<string>("darkContrast"),
-      lightContrast: workspaceConfiguration.get<string>("lightContrast"),
-      darkWorkbench: workspaceConfiguration.get<string>("darkWorkbench"),
-      lightWorkbench: workspaceConfiguration.get<string>("lightWorkbench"),
-      darkSelection: workspaceConfiguration.get<string>("darkSelection"),
-      lightSelection: workspaceConfiguration.get<string>("lightSelection"),
-      darkCursor: workspaceConfiguration.get<string>("darkCursor"),
-      lightCursor: workspaceConfiguration.get<string>("lightCursor"),
-      italicKeywords: workspaceConfiguration.get<boolean>("italicKeywords"),
-      italicComments: workspaceConfiguration.get<boolean>("italicComments"),
-      diagnosticTextBackgroundOpacity: workspaceConfiguration.get<string>(
-        "diagnosticTextBackgroundOpacity"
+      darkContrast: workspaceConfiguration.get<string>("theme.darkContrast"),
+      lightContrast: workspaceConfiguration.get<string>("theme.lightContrast"),
+      darkWorkbench: workspaceConfiguration.get<string>("theme.darkWorkbench"),
+      lightWorkbench: workspaceConfiguration.get<string>(
+        "theme.lightWorkbench"
       ),
-      highContrast: workspaceConfiguration.get<boolean>("highContrast"),
+      darkSelection: workspaceConfiguration.get<string>("theme.darkSelection"),
+      lightSelection: workspaceConfiguration.get<string>(
+        "theme.lightSelection"
+      ),
+      darkCursor: workspaceConfiguration.get<string>("theme.darkCursor"),
+      lightCursor: workspaceConfiguration.get<string>("theme.lightCursor"),
+      italicKeywords: workspaceConfiguration.get<boolean>(
+        "theme.italicKeywords"
+      ),
+      italicComments: workspaceConfiguration.get<boolean>(
+        "theme.italicComments"
+      ),
+      diagnosticTextBackgroundOpacity: workspaceConfiguration.get<string>(
+        "theme.diagnosticTextBackgroundOpacity"
+      ),
+      highContrast: workspaceConfiguration.get<boolean>("theme.highContrast"),
+      autoSwitch: workspaceConfiguration.get<boolean>("autoSwitch.enabled"),
+      lightThemeTime: workspaceConfiguration.get<string>(
+        "autoSwitch.lightThemeTime"
+      ),
+      darkThemeTime: workspaceConfiguration.get<string>(
+        "autoSwitch.darkThemeTime"
+      ),
     };
   }
   isDefaultConfiguration(configuration: Configuration): boolean {

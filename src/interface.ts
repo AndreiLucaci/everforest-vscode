@@ -17,6 +17,9 @@ export interface Configuration {
   italicComments?: boolean;
   diagnosticTextBackgroundOpacity?: string;
   highContrast?: boolean;
+  autoSwitch?: boolean;
+  lightThemeTime?: string;
+  darkThemeTime?: string;
 }
 
 export interface Palette {
