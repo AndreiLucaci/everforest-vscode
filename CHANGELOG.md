@@ -2,6 +2,10 @@
 
 All notable changes to the "everforest-pro" extension will be documented in this file.
 
+## 1.0.3
+
+- Remove broken OpenVsix link from readme
+
 ## 1.0.2
 
 - Rework the README

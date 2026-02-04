@@ -13,7 +13,6 @@
 ![Everforest Pro Dark](./src/images/everforest-pro-dark.png)
 
 [![Visual Studio Marketplace](https://img.shields.io/badge/vscode-marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=AndreiLucaci.everforest-pro)
-[![Open VSX](https://img.shields.io/badge/open--vsx-registry-green)](https://open-vsx.org/extension/AndreiLucaci/everforest-pro)
 [![GitHub](https://img.shields.io/badge/github-repository-blueviolet)](https://github.com/AndreiLucaci/everforest-vscode)
 [![Preview](https://img.shields.io/badge/preview-vscode.dev-yellow)](https://vscode.dev/theme/AndreiLucaci.everforest-pro)
 
