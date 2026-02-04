@@ -7,20 +7,17 @@ import { getSemantic } from "../semantic";
 
 class Utils {
   private async writeFile(path: string, data: unknown) {
-    // {{{
     return new Promise((resolve, reject) => {
       fs.writeFile(path, JSON.stringify(data, null, 2), (err) =>
-        err ? reject(err) : resolve("Success"),
+        err ? reject(err) : resolve("Success")
       );
     });
-  } // }}}
+  }
   async generate(darkPath: string, lightPath: string, data: any) {
-    // {{{
     this.writeFile(darkPath, data.dark);
     this.writeFile(lightPath, data.light);
-  } // }}}
+  }
   getThemeData(configuration: Configuration) {
-    // {{{
     return {
       dark: {
         name: "Everforest Pro Dark",
@@ -39,7 +36,7 @@ class Utils {
         tokenColors: getSyntax(configuration, "light"),
       },
     };
-  } // }}}
+  }
 }
 
 const utils = new Utils();
@@ -61,7 +58,5 @@ const configuration: Configuration = {
 utils.generate(
   join(__dirname, "..", "..", "themes", "everforest-dark.json"),
   join(__dirname, "..", "..", "themes", "everforest-light.json"),
-  utils.getThemeData(configuration),
+  utils.getThemeData(configuration)
 );
-
-// vim: fdm=marker fmr={{{,}}}:

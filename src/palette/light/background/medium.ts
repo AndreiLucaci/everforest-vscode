@@ -11,5 +11,3 @@ export default {
   grey2: "#879686",
   shadow: "#3c474d20",
 };
-
-// vim: fdm=marker fmr={{{,}}}:

@@ -11,9 +11,7 @@ export function flatWorkbench(
   let cursorFg: string;
   let diagnosticTextBackgroundOpacity: string;
   if (variant === "dark") {
-    switch (
-      configuration.darkSelection // {{{
-    ) {
+    switch (configuration.darkSelection) {
       case "grey": {
         selectionBg = `${palette.bg4}e0`;
         editorSelectionBg = `${palette.bg4}c0`;
@@ -67,10 +65,8 @@ export function flatWorkbench(
         editorSelectionBg = `${palette.bg4}c0`;
         editorSelectionBgHl = `${palette.bg4}60`;
       }
-    } // }}}
-    switch (
-      configuration.darkCursor // {{{
-    ) {
+    }
+    switch (configuration.darkCursor) {
       case "white": {
         cursorFg = `${palette.fg}`;
         break;
@@ -106,11 +102,9 @@ export function flatWorkbench(
       default: {
         cursorFg = `${palette.fg}`;
       }
-    } // }}}
+    }
   } else {
-    switch (
-      configuration.lightSelection // {{{
-    ) {
+    switch (configuration.lightSelection) {
       case "grey": {
         selectionBg = `${palette.bg4}c0`;
         editorSelectionBg = `${palette.bg4}a0`;
@@ -164,10 +158,8 @@ export function flatWorkbench(
         editorSelectionBg = `${palette.bg4}a0`;
         editorSelectionBgHl = `${palette.bg4}50`;
       }
-    } // }}}
-    switch (
-      configuration.lightCursor // {{{
-    ) {
+    }
+    switch (configuration.lightCursor) {
       case "black": {
         cursorFg = `${palette.fg}`;
         break;
@@ -203,11 +195,9 @@ export function flatWorkbench(
       default: {
         cursorFg = `${palette.fg}`;
       }
-    } // }}}
+    }
   }
-  switch (
-    configuration.diagnosticTextBackgroundOpacity // {{{
-  ) {
+  switch (configuration.diagnosticTextBackgroundOpacity) {
     case "0%": {
       diagnosticTextBackgroundOpacity = "00";
       break;
@@ -231,7 +221,7 @@ export function flatWorkbench(
     default: {
       diagnosticTextBackgroundOpacity = "00";
     }
-  } // }}}
+  }
   const tokens = {
     foreground: `${palette.grey2}`,
     focusBorder: `${palette.bg}00`,
@@ -708,5 +698,3 @@ export function flatWorkbench(
   }
   return tokens;
 }
-
-// vim: fdm=marker fmr={{{,}}}:

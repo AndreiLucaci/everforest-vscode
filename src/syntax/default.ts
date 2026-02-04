@@ -2,7 +2,7 @@ import { Palette } from "../interface";
 
 export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
   const syntax = [
-    // Syntax{{{
+    // Syntax
     {
       name: "Keyword",
       scope:
@@ -167,8 +167,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.fg,
       },
     },
-    // }}}
-    // Markdown{{{
+
+    // Markdown
     {
       name: "Markdown heading1",
       scope: "heading.1.markdown, markup.heading.setext.1.markdown",
@@ -319,8 +319,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.red,
       },
     },
-    // }}}
-    // reStructuredText{{{
+
+    // reStructuredText
     {
       name: "reStructuredText heading",
       scope: "punctuation.definition.heading.restructuredtext",
@@ -375,8 +375,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.green,
       },
     },
-    // }}}
-    // LaTex{{{
+
+    // LaTex
     {
       name: "LaTex delimiter",
       scope:
@@ -415,8 +415,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Html/Xml{{{
+
+    // Html/Xml
     {
       name: "Html grey",
       scope: "punctuation.separator.namespace.xml",
@@ -455,8 +455,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Proto{{{
+
+    // Proto
     {
       name: "Proto yellow",
       scope: "storage.type.proto",
@@ -479,8 +479,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // CSS{{{
+
+    // CSS
     {
       name: "CSS grey",
       scope:
@@ -541,8 +541,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // SASS{{{
+
+    // SASS
     {
       name: "SASS grey",
       scope:
@@ -582,8 +582,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Stylus{{{
+
+    // Stylus
     {
       name: "Stylus white",
       scope: "meta.function.stylus",
@@ -598,8 +598,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.yellow,
       },
     },
-    // }}}
-    // JavaScript{{{
+
+    // JavaScript
     {
       name: "JavaScript white",
       scope: "string.unquoted.js",
@@ -629,8 +629,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.orange,
       },
     },
-    // }}}
-    // JSX{{{
+
+    // JSX
     {
       name: "JSX white",
       scope: "JSXNested",
@@ -646,8 +646,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.green,
       },
     },
-    // }}}
-    // TypeScript{{{
+
+    // TypeScript
     {
       name: "TypeScript white",
       scope: "entity.name.type.module.ts",
@@ -702,8 +702,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // TSX{{{
+
+    // TSX
     {
       name: "TSX white",
       scope: "entity.name.type.module.tsx",
@@ -758,8 +758,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.orange,
       },
     },
-    // }}}
-    // CoffeeScript{{{
+
+    // CoffeeScript
     {
       name: "CoffeeScript orange",
       scope: "storage.type.function.coffee",
@@ -767,8 +767,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.orange,
       },
     },
-    // }}}
-    // PureScript{{{
+
+    // PureScript
     {
       name: "PureScript white",
       scope: "meta.type-signature.purescript",
@@ -806,8 +806,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Dart{{{
+
+    // Dart
     {
       name: "Dart grey",
       scope: "punctuation.dot.dart",
@@ -851,8 +851,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Pug{{{
+
+    // Pug
     {
       name: "Pug red",
       scope: "entity.other.attribute-name.class.pug",
@@ -881,8 +881,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // C{{{
+
+    // C
     {
       name: "C white",
       scope:
@@ -921,8 +921,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // C++{{{
+
+    // C++
     {
       name: "C++ white",
       scope:
@@ -962,8 +962,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // C#{{{
+
+    // C#
     {
       name: "C# red",
       scope: "keyword.other.using.cs",
@@ -1001,8 +1001,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // F#{{{
+
+    // F#
     {
       name: "F# white",
       scope: "keyword.symbol.fsharp, constant.language.unit.fsharp",
@@ -1039,8 +1039,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Java{{{
+
+    // Java
     {
       name: "Java grey",
       scope: "punctuation.separator.java, punctuation.separator.period.java",
@@ -1077,8 +1077,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Kotlin{{{
+
+    // Kotlin
     {
       name: "Kotlin red",
       scope: "keyword.other.import.kotlin",
@@ -1107,8 +1107,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Scala{{{
+
+    // Scala
     {
       name: "Scala purple",
       scope: "entity.name.package.scala",
@@ -1159,8 +1159,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.red,
       },
     },
-    // }}}
-    // Groovy{{{
+
+    // Groovy
     {
       name: "Groovy white",
       scope:
@@ -1212,8 +1212,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Go{{{
+
+    // Go
     {
       name: "Go red",
       scope: "keyword.type.go",
@@ -1235,8 +1235,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Rust{{{
+
+    // Rust
     {
       name: "Rust white",
       scope: "entity.name.type.mod.rust",
@@ -1273,8 +1273,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Swift{{{
+
+    // Swift
     {
       name: "Swift white",
       scope: "meta.function-call.swift, support.function.any-method.swift",
@@ -1289,8 +1289,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // PHP{{{
+
+    // PHP
     {
       name: "PHP white",
       scope: "keyword.operator.class.php",
@@ -1327,8 +1327,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Python{{{
+
+    // Python
     {
       name: "Python white",
       scope: "meta.function-call.arguments.python",
@@ -1359,8 +1359,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Lua{{{
+
+    // Lua
     {
       name: "Lua aqua",
       scope: "constant.language.lua",
@@ -1375,8 +1375,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.blue,
       },
     },
-    // }}}
-    // Ruby{{{
+
+    // Ruby
     {
       name: "Ruby white",
       scope: "meta.function.method.with-arguments.ruby",
@@ -1428,8 +1428,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.blue,
       },
     },
-    // }}}
-    // Haskell{{{
+
+    // Haskell
     {
       name: "Haskell orange",
       scope:
@@ -1467,8 +1467,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // Julia{{{
+
+    // Julia
     {
       name: "Julia red",
       scope: "keyword.control.import.julia, keyword.control.export.julia",
@@ -1497,8 +1497,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Elm{{{
+
+    // Elm
     {
       name: "Elm white",
       scope: "keyword.other.period.elm",
@@ -1513,8 +1513,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.yellow,
       },
     },
-    // }}}
-    // R{{{
+
+    // R
     {
       name: "R orange",
       scope: "keyword.other.r",
@@ -1543,8 +1543,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Erlang{{{
+
+    // Erlang
     {
       name: "Erlang grey",
       scope:
@@ -1584,8 +1584,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Elixir{{{
+
+    // Elixir
     {
       name: "Elixir aqua",
       scope:
@@ -1608,8 +1608,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // OCaml{{{
+
+    // OCaml
     {
       name: "OCaml white",
       scope: "entity.name.type.value-signature.ocaml",
@@ -1631,8 +1631,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // Perl{{{
+
+    // Perl
     {
       name: "Perl red",
       scope: "storage.type.sub.perl, storage.type.declare.routine.perl",
@@ -1640,8 +1640,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.red,
       },
     },
-    // }}}
-    // Common Lisp{{{
+
+    // Common Lisp
     {
       name: "Lisp white",
       scope: "meta.function.lisp",
@@ -1670,8 +1670,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // Clojure{{{
+
+    // Clojure
     {
       name: "Clojure green",
       scope:
@@ -1694,8 +1694,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.blue,
       },
     },
-    // }}}
-    // Shell{{{
+
+    // Shell
     {
       name: "Shell white",
       scope: "meta.scope.if-block.shell, meta.scope.group.shell",
@@ -1726,8 +1726,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Fish{{{
+
+    // Fish
     {
       name: "Fish red",
       scope: "support.function.builtin.fish",
@@ -1765,8 +1765,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // PowerShell{{{
+
+    // PowerShell
     {
       name: "PowerShell grey",
       scope: "punctuation.definition.variable.powershell",
@@ -1797,8 +1797,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // GraphQL{{{
+
+    // GraphQL
     {
       name: "GraphQL white",
       scope: "string.unquoted.alias.graphql",
@@ -1820,8 +1820,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // {{{Makefile
+
+    // Makefile
     {
       name: "Makefile orange",
       scope: "entity.name.function.target.makefile",
@@ -1843,8 +1843,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.green,
       },
     },
-    // }}}
-    // {{{CMake
+
+    // CMake
     {
       name: "CMake green",
       scope: "string.source.cmake",
@@ -1866,8 +1866,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // {{{VimL
+
+    // VimL
     {
       name: "VimL grey",
       scope: "punctuation.definition.map.viml",
@@ -1896,8 +1896,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.blue,
       },
     },
-    // }}}
-    // {{{Tmux
+
+    // Tmux
     {
       name: "Tmux green",
       scope: "constant.language.tmux, constant.numeric.tmux",
@@ -1905,8 +1905,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.green,
       },
     },
-    // }}}
-    // {{{Dockerfile
+
+    // Dockerfile
     {
       name: "Dockerfile orange",
       scope: "entity.name.function.package-manager.dockerfile",
@@ -1943,8 +1943,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // Diff{{{
+
+    // Diff
     {
       name: "Diff grey",
       scope: "punctuation.definition.separator.diff",
@@ -1994,8 +1994,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
-    // {{{Git
+
+    // Git
     {
       name: "Git red",
       scope:
@@ -2026,8 +2026,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // SQL{{{
+
+    // SQL
     {
       name: "SQL yellow",
       scope: "support.function.aggregate.sql",
@@ -2043,8 +2043,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.green,
       },
     },
-    // }}}
-    // GraphQL{{{
+
+    // GraphQL
     {
       name: "GraphQL yellow",
       scope: "support.type.graphql",
@@ -2066,8 +2066,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // JSON{{{
+
+    // JSON
     {
       name: "JSON grey",
       scope:
@@ -2090,8 +2090,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.green,
       },
     },
-    // }}}
-    // YAML{{{
+
+    // YAML
     {
       name: "YAML grey",
       scope: "punctuation.separator.key-value.mapping.yaml",
@@ -2115,8 +2115,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.aqua,
       },
     },
-    // }}}
-    // TOML{{{
+
+    // TOML
     {
       name: "TOML orange",
       scope: "keyword.key.toml",
@@ -2147,10 +2147,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.purple,
       },
     },
-    // }}}
   ];
   if (italicComments) {
-    // {{{
     syntax.push({
       name: "Comment",
       scope: "comment, string.comment, punctuation.definition.comment",
@@ -2158,9 +2156,8 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.grey1,
         fontStyle: "italic",
       },
-    }); // }}}
+    });
   } else {
-    // {{{
     syntax.push({
       name: "Comment",
       scope: "comment, string.comment, punctuation.definition.comment",
@@ -2168,8 +2165,6 @@ export function getDefaultSyntax(palette: Palette, italicComments: boolean) {
         foreground: palette.grey1,
       },
     });
-  } // }}}
+  }
   return syntax;
 }
-
-// vim: fdm=marker fmr={{{,}}}:

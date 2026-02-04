@@ -16,9 +16,7 @@ export function getPalette(
   let paletteForeground = darkForeground;
   if (variant === "dark") {
     paletteForeground = darkForeground;
-    switch (
-      configuration.darkContrast // {{{
-    ) {
+    switch (configuration.darkContrast) {
       case "hard": {
         paletteBackground = darkBackgroundHard;
         break;
@@ -34,12 +32,10 @@ export function getPalette(
       default: {
         paletteBackground = darkBackgroundMedium;
       }
-    } // }}}
+    }
   } else {
     paletteForeground = lightForeground;
-    switch (
-      configuration.lightContrast // {{{
-    ) {
+    switch (configuration.lightContrast) {
       case "hard": {
         paletteBackground = lightBackgroundHard;
         break;
@@ -55,10 +51,9 @@ export function getPalette(
       default: {
         paletteBackground = lightBackgroundMedium;
       }
-    } // }}}
+    }
   }
   return {
-    // {{{
     bg0: paletteBackground.bg0,
     bg1: paletteBackground.bg1,
     bg: paletteBackground.bg,
@@ -86,7 +81,5 @@ export function getPalette(
     dimBlue: paletteForeground.dimBlue,
     dimPurple: paletteForeground.dimPurple,
     badge: paletteForeground.badge,
-  }; // }}}
+  };
 }
-
-// vim: fdm=marker fmr={{{,}}}:

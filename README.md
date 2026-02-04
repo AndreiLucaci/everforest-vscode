@@ -86,8 +86,8 @@ Everforest Pro offers extensive customization options to match your personal pre
 **A:** To use cursive italic keywords:
 
 1. Install a font with cursive italic support (e.g., [JetBrains Mono](https://www.jetbrains.com/lp/mono/), [Fira Code](https://github.com/tonsky/FiraCode))
-2. Enable `everforest.italicKeywords` in settings
-3. Optionally disable `everforest.italicComments` for better contrast
+2. Enable `everforestPro.italicKeywords` in settings
+3. Optionally disable `everforestPro.italicComments` for better contrast
 
 **Q: Can I use this theme at night?**
 

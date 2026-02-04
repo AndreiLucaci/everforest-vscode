@@ -60,7 +60,7 @@
     "configuration": {
       "title": "Everforest Pro",
       "properties": {
-        "everforest.darkContrast": {
+        "everforestPro.darkContrast": {
           "type": "string",
           "default": "medium",
           "description": "Background contrast for the dark variant.",
@@ -70,7 +70,7 @@
             "hard"
           ]
         },
-        "everforest.lightContrast": {
+        "everforestPro.lightContrast": {
           "type": "string",
           "default": "medium",
           "description": "Background contrast for the light variant.",
@@ -80,7 +80,7 @@
             "hard"
           ]
         },
-        "everforest.darkWorkbench": {
+        "everforestPro.darkWorkbench": {
           "type": "string",
           "default": "material",
           "description": "Workbench style for the dark variant.",
@@ -90,7 +90,7 @@
             "high-contrast"
           ]
         },
-        "everforest.lightWorkbench": {
+        "everforestPro.lightWorkbench": {
           "type": "string",
           "default": "material",
           "description": "Workbench style for the light variant.",
@@ -100,7 +100,7 @@
             "high-contrast"
           ]
         },
-        "everforest.darkCursor": {
+        "everforestPro.darkCursor": {
           "type": "string",
           "default": "white",
           "description": "The cursor color in the dark variant.",
@@ -115,7 +115,7 @@
             "purple"
           ]
         },
-        "everforest.lightCursor": {
+        "everforestPro.lightCursor": {
           "type": "string",
           "default": "black",
           "description": "The cursor color in the light variant.",
@@ -130,7 +130,7 @@
             "purple"
           ]
         },
-        "everforest.darkSelection": {
+        "everforestPro.darkSelection": {
           "type": "string",
           "default": "grey",
           "description": "The background color of selected text in the dark variant.",
@@ -145,7 +145,7 @@
             "purple"
           ]
         },
-        "everforest.lightSelection": {
+        "everforestPro.lightSelection": {
           "type": "string",
           "default": "grey",
           "description": "The background color of selected text in the light variant.",
@@ -160,17 +160,17 @@
             "purple"
           ]
         },
-        "everforest.italicKeywords": {
+        "everforestPro.italicKeywords": {
           "type": "boolean",
           "default": false,
           "description": "Italicize keywords or not."
         },
-        "everforest.italicComments": {
+        "everforestPro.italicComments": {
           "type": "boolean",
           "default": true,
           "description": "Italicize comments or not."
         },
-        "everforest.diagnosticTextBackgroundOpacity": {
+        "everforestPro.diagnosticTextBackgroundOpacity": {
           "type": "string",
           "default": "0%",
           "markdownDescription": "The opacity of the background color of [diagnostic text](https://code.visualstudio.com/updates/v1_52#_error-background-colors).",
@@ -182,7 +182,7 @@
             "50%"
           ]
         },
-        "everforest.highContrast": {
+        "everforestPro.highContrast": {
           "type": "boolean",
           "default": false,
           "description": "Whether to add an additional border around items across the UI to increase the contrast."

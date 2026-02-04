@@ -13,5 +13,3 @@ export function getSyntax(configuration: Configuration, variant: string) {
   }
   return syntax;
 }
-
-// vim: fdm=marker fmr={{{,}}}:
