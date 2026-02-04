@@ -52,9 +52,29 @@
         "path": "./themes/everforest-dark.json"
       },
       {
+        "label": "Everforest Pro Dark Cozy",
+        "uiTheme": "vs-dark",
+        "path": "./themes/everforest-dark-cozy.json"
+      },
+      {
+        "label": "Everforest Pro Dark Vibrant",
+        "uiTheme": "vs-dark",
+        "path": "./themes/everforest-dark-vibrant.json"
+      },
+      {
         "label": "Everforest Pro Light",
         "uiTheme": "vs",
         "path": "./themes/everforest-light.json"
+      },
+      {
+        "label": "Everforest Pro Light Cozy",
+        "uiTheme": "vs",
+        "path": "./themes/everforest-light-cozy.json"
+      },
+      {
+        "label": "Everforest Pro Light Vibrant",
+        "uiTheme": "vs",
+        "path": "./themes/everforest-light-vibrant.json"
       }
     ],
     "configuration": {
@@ -203,21 +223,48 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "Automatically switch between light and dark themes based on time schedule."
+          "description": "Automatically switch themes based on time schedule."
         },
-        "everforestPro.autoSwitch.lightThemeTime": {
-          "type": "string",
-          "default": "07:00",
-          "title": "Light Theme Time",
-          "description": "Time to switch to light theme (24-hour format, e.g., '07:00').",
-          "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9]$"
-        },
-        "everforestPro.autoSwitch.darkThemeTime": {
-          "type": "string",
-          "default": "19:00",
-          "title": "Dark Theme Time",
-          "description": "Time to switch to dark theme (24-hour format, e.g., '19:00').",
-          "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9]$"
+        "everforestPro.autoSwitch.schedule": {
+          "type": "array",
+          "default": [
+            {
+              "time": "07:00",
+              "theme": "Everforest Pro Light"
+            },
+            {
+              "time": "19:00",
+              "theme": "Everforest Pro Dark"
+            }
+          ],
+          "title": "Schedule",
+          "description": "Define when to switch to which theme. Each entry specifies a time (24-hour format) and theme name.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "time": {
+                "type": "string",
+                "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9]$",
+                "description": "Time in 24-hour format (e.g., '07:00', '19:30')"
+              },
+              "theme": {
+                "type": "string",
+                "enum": [
+                  "Everforest Pro Dark",
+                  "Everforest Pro Dark Cozy",
+                  "Everforest Pro Dark Vibrant",
+                  "Everforest Pro Light",
+                  "Everforest Pro Light Cozy",
+                  "Everforest Pro Light Vibrant"
+                ],
+                "description": "Theme to switch to at this time"
+              }
+            },
+            "required": [
+              "time",
+              "theme"
+            ]
+          }
         }
       }
     }

@@ -4,6 +4,24 @@ All notable changes to the "everforest-pro" extension will be documented in this
 
 ## 2.0.0
 
+### 🎨 New Theme Variants
+
+**6 Theme Options Available!** Choose from pre-configured variants without any settings:
+
+**Dark Themes:**
+
+- **Everforest Pro Dark** - Balanced contrast (default, medium)
+- **Everforest Pro Dark Cozy** - Softer backgrounds (soft contrast)
+- **Everforest Pro Dark Vibrant** - Higher contrast (hard contrast)
+
+**Light Themes:**
+
+- **Everforest Pro Light** - Balanced contrast (default, medium)
+- **Everforest Pro Light Cozy** - Softer backgrounds (soft contrast)
+- **Everforest Pro Light Vibrant** - Higher contrast (hard contrast)
+
+Simply select your preferred variant from the theme picker - no configuration required!
+
 ### 🚨 Breaking Changes
 
 **Settings Reorganization** - All settings have been restructured into logical groups:
@@ -32,6 +50,7 @@ All notable changes to the "everforest-pro" extension will be documented in this
 
 ### ✨ New Features
 
+- **Flexible Auto-Switch Schedule** - Define custom schedules with any theme at any time. No longer limited to just light/dark - mix Cozy, Vibrant, and standard themes throughout your day!
 - **Improved Settings Organization** - Settings are now grouped into `theme` and `autoSwitch` sections for better discoverability
 - **Better Auto-Switch Implementation** - More reliable and efficient theme switching with proper cleanup and validation
 - **Enhanced Timer Logic** - Prevents duplicate work, validates inputs, and auto-disables when not needed

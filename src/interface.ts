@@ -18,8 +18,7 @@ export interface Configuration {
   diagnosticTextBackgroundOpacity?: string;
   highContrast?: boolean;
   autoSwitch?: boolean;
-  lightThemeTime?: string;
-  darkThemeTime?: string;
+  schedule?: Array<{ time: string; theme: string }>;
 }
 
 export interface Palette {

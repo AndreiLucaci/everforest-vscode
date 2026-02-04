@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { join } from "path";
+import { join, dirname } from "path";
 import { ConfigurationChangeEvent, workspace, window, commands } from "vscode";
 import { Configuration } from "./interface";
 import { getWorkbench } from "./workbench";
@@ -41,12 +41,9 @@ export default class Utils {
       ),
       highContrast: workspaceConfiguration.get<boolean>("theme.highContrast"),
       autoSwitch: workspaceConfiguration.get<boolean>("autoSwitch.enabled"),
-      lightThemeTime: workspaceConfiguration.get<string>(
-        "autoSwitch.lightThemeTime"
-      ),
-      darkThemeTime: workspaceConfiguration.get<string>(
-        "autoSwitch.darkThemeTime"
-      ),
+      schedule: workspaceConfiguration.get<
+        Array<{ time: string; theme: string }>
+      >("autoSwitch.schedule"),
     };
   }
   isDefaultConfiguration(configuration: Configuration): boolean {
@@ -85,6 +82,21 @@ export default class Utils {
       },
     };
   }
+
+  getThemeVariantData(
+    name: string,
+    variant: string,
+    configuration: Configuration
+  ) {
+    return {
+      name: name,
+      type: variant,
+      semanticHighlighting: true,
+      semanticTokenColors: getSemantic(configuration, variant),
+      colors: getWorkbench(configuration, variant),
+      tokenColors: getSyntax(configuration, variant),
+    };
+  }
   isNewlyInstalled(): boolean {
     const flagPath = join(__dirname, "..", ".flag");
     if (!fs.existsSync(flagPath)) {
@@ -114,5 +126,82 @@ export default class Utils {
   async generate(darkPath: string, lightPath: string, data: any) {
     this.writeFile(darkPath, data.dark).then(this.promptToReload);
     this.writeFile(lightPath, data.light);
+
+    // Generate variant themes
+    const baseConfig = {
+      darkWorkbench: data.dark.colors ? "material" : "material",
+      lightWorkbench: data.light.colors ? "material" : "material",
+      darkSelection: "grey",
+      lightSelection: "grey",
+      darkCursor: "white",
+      lightCursor: "black",
+      italicKeywords: false,
+      italicComments: true,
+      diagnosticTextBackgroundOpacity: "0%",
+      highContrast: false,
+    };
+
+    // Get current config for other settings
+    const config = this.getConfiguration();
+
+    // Dark Cozy (soft)
+    const darkCozyConfig: Configuration = {
+      ...baseConfig,
+      darkContrast: "soft",
+      lightContrast: "medium",
+    };
+    this.writeFile(
+      join(dirname(darkPath), "everforest-dark-cozy.json"),
+      this.getThemeVariantData(
+        "Everforest Pro Dark Cozy",
+        "dark",
+        darkCozyConfig
+      )
+    );
+
+    // Dark Vibrant (hard)
+    const darkVibrantConfig: Configuration = {
+      ...baseConfig,
+      darkContrast: "hard",
+      lightContrast: "medium",
+    };
+    this.writeFile(
+      join(dirname(darkPath), "everforest-dark-vibrant.json"),
+      this.getThemeVariantData(
+        "Everforest Pro Dark Vibrant",
+        "dark",
+        darkVibrantConfig
+      )
+    );
+
+    // Light Cozy (soft)
+    const lightCozyConfig: Configuration = {
+      ...baseConfig,
+      darkContrast: "medium",
+      lightContrast: "soft",
+    };
+    this.writeFile(
+      join(dirname(lightPath), "everforest-light-cozy.json"),
+      this.getThemeVariantData(
+        "Everforest Pro Light Cozy",
+        "light",
+        lightCozyConfig
+      )
+    );
+
+    // Light Vibrant (hard)
+    const lightVibrantConfig: Configuration = {
+      ...baseConfig,
+      darkContrast: "medium",
+      lightContrast: "hard",
+    };
+    this.writeFile(
+      join(dirname(lightPath), "everforest-light-vibrant.json"),
+      this.getThemeVariantData(
+        "Everforest Pro Light Vibrant",
+        "light",
+        lightVibrantConfig
+      )
+    );
   }
 }

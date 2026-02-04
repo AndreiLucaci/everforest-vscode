@@ -53,7 +53,13 @@ Everforest Pro is meticulously crafted with **warm, nature-inspired tones** and 
 
 1. Open the **Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P`)
 2. Type `Color Theme`
-3. Select **Everforest Pro Light** or **Everforest Pro Dark**
+3. Select your preferred variant:
+   - **Everforest Pro Dark** - Balanced contrast (default)
+   - **Everforest Pro Dark Cozy** - Softer, gentler on the eyes
+   - **Everforest Pro Dark Vibrant** - Higher contrast, crisper
+   - **Everforest Pro Light** - Balanced contrast (default)
+   - **Everforest Pro Light Cozy** - Softer, gentler on the eyes
+   - **Everforest Pro Light Vibrant** - Higher contrast, crisper
 
 That's it! Your eyes will thank you. 🌟
 
@@ -61,7 +67,25 @@ That's it! Your eyes will thank you. 🌟
 
 ## ⚙️ Customization
 
-Everforest Pro offers extensive customization options to match your personal preferences:
+Everforest Pro offers **6 beautiful theme variants** and extensive customization options:
+
+### 🎨 Theme Variants
+
+Choose from **6 pre-configured themes** optimized for different preferences:
+
+**Dark Themes:**
+
+- **Everforest Pro Dark** - Balanced contrast, perfect for most users
+- **Everforest Pro Dark Cozy** - Softer backgrounds, easier on the eyes for long sessions
+- **Everforest Pro Dark Vibrant** - Higher contrast for those who prefer crispness
+
+**Light Themes:**
+
+- **Everforest Pro Light** - Balanced contrast, perfect for most users
+- **Everforest Pro Light Cozy** - Softer backgrounds, gentler on the eyes
+- **Everforest Pro Light Vibrant** - Higher contrast for enhanced readability
+
+Simply pick your variant from the VS Code theme selector - no configuration needed!
 
 ### Available Settings
 
@@ -70,21 +94,34 @@ Everforest Pro offers extensive customization options to match your personal pre
 - **Italic Keywords** - Enable cursive italics for keywords
 - **Italic Comments** - Toggle italic styling for comments
 - **Custom Palette** - Fine-tune individual colors
-- **🌅 Auto Theme Switching** - Automatically switch between light and dark themes
+- **🌅 Auto Theme Switching** - Automatically switch between any theme variants on a flexible schedule
 
 ### 🌅 Auto Theme Switching (Pro Feature)
 
-Let Everforest Pro automatically switch between light and dark themes based on your schedule!
+Let Everforest Pro automatically switch between themes based on your custom schedule!
 
-**Time-Based Schedule:**
+**Flexible Time-Based Schedule:**
 
 ```json
 "everforestPro.autoSwitch.enabled": true,
-"everforestPro.autoSwitch.lightThemeTime": "07:00",
-"everforestPro.autoSwitch.darkThemeTime": "19:00"
+"everforestPro.autoSwitch.schedule": [
+  { "time": "07:00", "theme": "Everforest Pro Light" },
+  { "time": "19:00", "theme": "Everforest Pro Dark" }
+]
 ```
 
-Perfect for protecting your eyes - light theme during the day, dark theme at night!
+You can mix and match any variants throughout your day:
+
+```json
+"everforestPro.autoSwitch.schedule": [
+  { "time": "06:00", "theme": "Everforest Pro Light Cozy" },
+  { "time": "12:00", "theme": "Everforest Pro Light Vibrant" },
+  { "time": "18:00", "theme": "Everforest Pro Dark Cozy" },
+  { "time": "22:00", "theme": "Everforest Pro Dark Vibrant" }
+]
+```
+
+Perfect for protecting your eyes and matching your workflow throughout the day!
 
 > **Note:** Settings are now organized into groups (`theme.*` and `autoSwitch.*`) for better organization. See the [migration guide](#-migration-from-v1x-to-v20) if upgrading from v1.x.
 
@@ -100,10 +137,19 @@ Perfect for protecting your eyes - light theme during the day, dark theme at nig
 
 **Q: How do I enable auto-switching themes?**
 
-**A:** Enable scheduled theme switching in settings:
+**A:** Enable scheduled theme switching in settings (JSON):
 
-1. Search for `everforestPro.autoSwitch.enabled` and set it to `true`
-2. Set your preferred times with `autoSwitch.lightThemeTime` and `autoSwitch.darkThemeTime` (24-hour format)
+1. Set `everforestPro.autoSwitch.enabled` to `true`
+2. Define your schedule with time and theme pairs:
+
+```json
+"everforestPro.autoSwitch.schedule": [
+  { "time": "07:00", "theme": "Everforest Pro Light" },
+  { "time": "19:00", "theme": "Everforest Pro Dark" }
+]
+```
+
+You can add as many schedule entries as you want!
 
 **Q: How do I enable italic keywords?**
 
@@ -158,13 +204,17 @@ Open your settings (JSON) and update:
 "everforestPro.darkContrast": "medium",
 "everforestPro.italicComments": true,
 "everforestPro.autoSwitch": true,
-"everforestPro.lightThemeTime": "07:00"
+"everforestPro.lightThemeTime": "07:00",
+"everforestPro.darkThemeTime": "19:00"
 
 // NEW (v2.0)
 "everforestPro.theme.darkContrast": "medium",
 "everforestPro.theme.italicComments": true,
 "everforestPro.autoSwitch.enabled": true,
-"everforestPro.autoSwitch.lightThemeTime": "07:00"
+"everforestPro.autoSwitch.schedule": [
+  { "time": "07:00", "theme": "Everforest Pro Light" },
+  { "time": "19:00", "theme": "Everforest Pro Dark" }
+]
 ```
 
 ### Complete Mapping
@@ -184,8 +234,8 @@ Open your settings (JSON) and update:
 | `diagnosticTextBackgroundOpacity` | `theme.diagnosticTextBackgroundOpacity` |
 | `highContrast`                    | `theme.highContrast`                    |
 | `autoSwitch`                      | `autoSwitch.enabled`                    |
-| `lightThemeTime`                  | `autoSwitch.lightThemeTime`             |
-| `darkThemeTime`                   | `autoSwitch.darkThemeTime`              |
+| ~~`lightThemeTime`~~              | _(use `autoSwitch.schedule` array)_     |
+| ~~`darkThemeTime`~~               | _(use `autoSwitch.schedule` array)_     |
 | ~~`autoSwitchMode`~~              | _(removed)_                             |
 
 ---

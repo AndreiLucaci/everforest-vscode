@@ -1,16 +1,14 @@
 import { workspace } from "vscode";
-import {
-  THEME_NAMES,
-  THEME_VARIANT,
-  DEFAULT_TIMES,
-  CONFIG_KEYS,
-  INTERVALS,
-  ThemeVariant,
-} from "./constants";
+import { CONFIG_KEYS, INTERVALS, DEFAULT_SCHEDULE } from "./constants";
+
+interface ScheduleEntry {
+  time: string;
+  theme: string;
+}
 
 export class AutoSwitcher {
   private scheduleTimer: NodeJS.Timeout | undefined;
-  private lastTheme: ThemeVariant | undefined;
+  private lastTheme: string | undefined;
   private lastCheckMinute = -1;
 
   start() {
@@ -79,54 +77,52 @@ export class AutoSwitcher {
     }
     this.lastCheckMinute = currentMinutes;
 
-    const lightTime =
-      config.get<string>(CONFIG_KEYS.LIGHT_THEME_TIME) ||
-      DEFAULT_TIMES.LIGHT_THEME;
-    const darkTime =
-      config.get<string>(CONFIG_KEYS.DARK_THEME_TIME) ||
-      DEFAULT_TIMES.DARK_THEME;
+    const schedule =
+      config.get<ScheduleEntry[]>(CONFIG_KEYS.SCHEDULE) || DEFAULT_SCHEDULE;
 
-    const lightMinutes = this.parseTime(lightTime);
-    const darkMinutes = this.parseTime(darkTime);
-
-    // Validate times
-    if (lightMinutes === null || darkMinutes === null) {
-      console.error(
-        `[Everforest Pro] Invalid time format. Light: ${lightTime}, Dark: ${darkTime}`
-      );
+    if (!Array.isArray(schedule) || schedule.length === 0) {
+      console.error("[Everforest Pro] Invalid or empty schedule");
       return;
     }
 
-    // If times are identical, don't switch
-    if (lightMinutes === darkMinutes) {
+    // Parse and sort schedule entries by time
+    const parsedSchedule = schedule
+      .map((entry) => ({
+        minutes: this.parseTime(entry.time),
+        theme: entry.theme,
+        original: entry,
+      }))
+      .filter((entry) => entry.minutes !== null)
+      .sort((a, b) => a.minutes! - b.minutes!);
+
+    if (parsedSchedule.length === 0) {
+      console.error("[Everforest Pro] No valid schedule entries");
       return;
     }
 
-    let targetTheme: ThemeVariant;
+    // Find the active theme based on current time
+    let activeTheme: string | undefined;
 
-    if (lightMinutes < darkMinutes) {
-      // Normal case: light time is before dark time (e.g., 7:00 to 19:00)
-      targetTheme =
-        currentMinutes >= lightMinutes && currentMinutes < darkMinutes
-          ? THEME_VARIANT.LIGHT
-          : THEME_VARIANT.DARK;
-    } else {
-      // Wrap-around case: dark time is before light time (e.g., 19:00 to 7:00 next day)
-      targetTheme =
-        currentMinutes >= darkMinutes && currentMinutes < lightMinutes
-          ? THEME_VARIANT.DARK
-          : THEME_VARIANT.LIGHT;
+    // Find the last schedule entry that has passed
+    for (let i = parsedSchedule.length - 1; i >= 0; i--) {
+      if (currentMinutes >= parsedSchedule[i].minutes!) {
+        activeTheme = parsedSchedule[i].theme;
+        break;
+      }
     }
 
-    if (this.lastTheme !== targetTheme) {
-      this.switchTheme(targetTheme);
-      this.lastTheme = targetTheme;
+    // If no entry has passed yet today, use the last entry from "yesterday"
+    if (!activeTheme) {
+      activeTheme = parsedSchedule[parsedSchedule.length - 1].theme;
+    }
+
+    if (this.lastTheme !== activeTheme) {
+      this.switchTheme(activeTheme);
+      this.lastTheme = activeTheme;
     }
   }
 
-  private async switchTheme(theme: ThemeVariant) {
-    const themeName =
-      theme === THEME_VARIANT.DARK ? THEME_NAMES.DARK : THEME_NAMES.LIGHT;
+  private async switchTheme(themeName: string) {
     const currentTheme = workspace
       .getConfiguration("workbench")
       .get<string>("colorTheme");
